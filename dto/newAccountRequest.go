@@ -1,6 +1,7 @@
 package dto
 
 import (
+	"banking/errs"
 	"strings"
 )
 

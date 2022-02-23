@@ -1,10 +1,10 @@
 package service
 
 import (
-	"banking-lib/errs"
 	"banking/domain"
 	realdomain "banking/domain"
 	"banking/dto"
+	"banking/errs"
 
 	"testing"
 

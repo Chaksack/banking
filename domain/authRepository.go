@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/ashishjuyal/banking-lib/logger"
+	"banking/logger"
 )
 
 type AuthRepository interface {

@@ -3,6 +3,8 @@ package app
 import (
 	"banking/domain"
 	"banking/service"
+
+	"banking/logger"
 	"fmt"
 	"log"
 	"net/http"
@@ -37,7 +39,7 @@ func Start() {
 	router := mux.NewRouter()
 
 	//wiring
-	//ch := CustomerHandlers{service.NewCustomerService(domain.NewCustomerRepositoryStub())}
+	ch := CustomerHandlers{service.NewCustomerService(domain.NewCustomerRepositoryStub())}
 	dbClient := getDbClient()
 	customerRepositoryDb := domain.NewCustomerRepositoryDb(dbClient)
 	accountRepositoryDb := domain.NewAccountRepositoryDb(dbClient)

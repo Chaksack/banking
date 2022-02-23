@@ -1,6 +1,6 @@
 package dto
 
-import "banking-libs/errs"
+import "banking/errs"
 
 const WITHDRAWAL = "withdrawal"
 const DEPOSIT = "deposit"

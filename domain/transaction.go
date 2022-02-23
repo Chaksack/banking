@@ -1,5 +1,7 @@
 package domain
 
+import "banking/dto"
+
 const WITHDRAWAL = "withdrawal"
 
 type Transaction struct {

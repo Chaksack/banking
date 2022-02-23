@@ -13,6 +13,7 @@ import (
 
 var router *mux.Router
 var ch CustomerHandlers
+
 var mockService *service.MockCustomerService
 
 func setup(t *testing.T) func() {
@@ -53,7 +54,7 @@ func Test_should_return_status_code_500_with_error_message(t *testing.T) {
 	// Arrange
 	teardown := setup(t)
 	defer teardown()
-	mockService.EXPECT().GetAllCustomer("").Return(nil, errs.NewUnexpectedError("some database error"))
+	// mockService.EXPECT().GetAllCustomer("").Return(nil, errs.NewUnexpectedError("some database error"))
 	request, _ := http.NewRequest(http.MethodGet, "/customers", nil)
 
 	// Act
